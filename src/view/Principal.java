@@ -9,13 +9,12 @@ public class Principal {
 		
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 5; j++) {
-				matriz[i][j] = (int) (Math.random() * 101);
+				matriz[i][j] = (int) (Math.random() * 100) + 1;
 			}
 		
 			Thread threadMatriz = new ThreadMatriz(matriz[i], i);
 			threadMatriz.start();
 		}
-
 	}
 
 }
